@@ -16,6 +16,10 @@
 		641DD3791E6BB5E500D5F840 /* FWAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 641DD3781E6BB5E500D5F840 /* FWAppTests.m */; };
 		641DD3841E6BB5E500D5F840 /* FWAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 641DD3831E6BB5E500D5F840 /* FWAppUITests.m */; };
 		641DD4001E6BCE7300D5F840 /* Embedded in Resources */ = {isa = PBXBuildFile; fileRef = 641DD3FF1E6BCE7300D5F840 /* Embedded */; };
+		64E643D51E7590CB00BFC37E /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E643D01E75909600BFC37E /* ZipArchive.framework */; };
+		64E643D61E7590CB00BFC37E /* ZipArchive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 64E643D01E75909600BFC37E /* ZipArchive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		64E643D71E7590D300BFC37E /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641DD4A21E6FCCE700D5F840 /* AFNetworking.framework */; };
+		64E643D81E7590D300BFC37E /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 641DD4A21E6FCCE700D5F840 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		641DD4A91E6FCCF800D5F840 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				64E643D61E7590CB00BFC37E /* ZipArchive.framework in Embed Frameworks */,
+				64E643D81E7590D300BFC37E /* AFNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		641DD35B1E6BB5E500D5F840 /* FWApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DD35F1E6BB5E500D5F840 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,6 +72,8 @@
 		641DD3831E6BB5E500D5F840 /* FWAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWAppUITests.m; sourceTree = "<group>"; };
 		641DD3851E6BB5E500D5F840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		641DD3FF1E6BCE7300D5F840 /* Embedded */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Embedded; path = ../../Embedded; sourceTree = "<group>"; };
+		641DD4A21E6FCCE700D5F840 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = FWApp/Frameworks/AFNetworking.framework; sourceTree = "<group>"; };
+		64E643D01E75909600BFC37E /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZipArchive.framework; path = FWApp/Frameworks/ZipArchive.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E643D51E7590CB00BFC37E /* ZipArchive.framework in Frameworks */,
+				64E643D71E7590D300BFC37E /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +110,7 @@
 				641DD3771E6BB5E500D5F840 /* FWAppTests */,
 				641DD3821E6BB5E500D5F840 /* FWAppUITests */,
 				641DD35C1E6BB5E500D5F840 /* Products */,
+				641DD49F1E6FCCB000D5F840 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +167,15 @@
 			path = FWAppUITests;
 			sourceTree = "<group>";
 		};
+		641DD49F1E6FCCB000D5F840 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64E643D01E75909600BFC37E /* ZipArchive.framework */,
+				641DD4A21E6FCCE700D5F840 /* AFNetworking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +186,7 @@
 				641DD3571E6BB5E500D5F840 /* Sources */,
 				641DD3581E6BB5E500D5F840 /* Frameworks */,
 				641DD3591E6BB5E500D5F840 /* Resources */,
+				641DD4A91E6FCCF800D5F840 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -427,8 +461,13 @@
 		641DD3891E6BB5E500D5F840 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FWApp/Frameworks",
+				);
 				INFOPLIST_FILE = FWApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tw.FWApp;
@@ -439,8 +478,13 @@
 		641DD38A1E6BB5E500D5F840 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FWApp/Frameworks",
+				);
 				INFOPLIST_FILE = FWApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tw.FWApp;

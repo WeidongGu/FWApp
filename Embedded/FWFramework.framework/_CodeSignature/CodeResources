@@ -6,7 +6,7 @@
 	<dict>
 		<key>FWFrameworkViewController.nib</key>
 		<data>
-		x70uQH79Bq2Dh0VU4UDuSsc2p8k=
+		AbEMvC0Gmyv/Th+k6cjAfOj45dQ=
 		</data>
 		<key>Headers/FWFramework.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nIGMS2SY1Eej/VXioK7gPiK/9OU=
+		lCVyDWOCRHgW9+dHdkadFbi/5Cs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -27,11 +27,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x70uQH79Bq2Dh0VU4UDuSsc2p8k=
+			AbEMvC0Gmyv/Th+k6cjAfOj45dQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			hHhaYD+MFyKFGHM7EakkMLrhnJ7qtNZdFs9JMGZtU90=
+			h53VwEFX5aLl4lQGWxNDAaw3IXzWWGx3HN6AyJwbpKw=
 			</data>
 		</dict>
 		<key>Headers/FWFramework.h</key>
