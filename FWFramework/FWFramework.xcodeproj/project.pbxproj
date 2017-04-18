@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		379C7164F83137871269A054 /* FWFrameworkDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 379C7F8085FA23CADBCAE4AE /* FWFrameworkDelegate.h */; };
+		379C71ACDDDB62B22C03CBDE /* FWFrameworkDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 379C779EB74165A3E475D6B5 /* FWFrameworkDelegate.m */; };
 		641DD3E41E6BB63300D5F840 /* FWFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641DD3DA1E6BB63300D5F840 /* FWFramework.framework */; };
 		641DD3E91E6BB63300D5F840 /* FWFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 641DD3E81E6BB63300D5F840 /* FWFrameworkTests.m */; };
 		641DD3EB1E6BB63300D5F840 /* FWFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 641DD3DD1E6BB63300D5F840 /* FWFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		641DD40A1E6BCEDB00D5F840 /* FWFrameworkViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 641DD4071E6BCEDB00D5F840 /* FWFrameworkViewController.h */; };
 		641DD40B1E6BCEDB00D5F840 /* FWFrameworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641DD4081E6BCEDB00D5F840 /* FWFrameworkViewController.m */; };
 		641DD40C1E6BCEDB00D5F840 /* FWFrameworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641DD4091E6BCEDB00D5F840 /* FWFrameworkViewController.xib */; };
+		6456B7051EA51A4300221AEF /* FWCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6456B7041EA51A4300221AEF /* FWCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		379C779EB74165A3E475D6B5 /* FWFrameworkDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWFrameworkDelegate.m; sourceTree = "<group>"; };
+		379C7F8085FA23CADBCAE4AE /* FWFrameworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWFrameworkDelegate.h; sourceTree = "<group>"; };
 		641DD3DA1E6BB63300D5F840 /* FWFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FWFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DD3DD1E6BB63300D5F840 /* FWFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWFramework.h; sourceTree = "<group>"; };
 		641DD3DE1E6BB63300D5F840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +40,7 @@
 		641DD4071E6BCEDB00D5F840 /* FWFrameworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWFrameworkViewController.h; sourceTree = "<group>"; };
 		641DD4081E6BCEDB00D5F840 /* FWFrameworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWFrameworkViewController.m; sourceTree = "<group>"; };
 		641DD4091E6BCEDB00D5F840 /* FWFrameworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FWFrameworkViewController.xib; sourceTree = "<group>"; };
+		6456B7041EA51A4300221AEF /* FWCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FWCore.framework; path = "../../../Library/Developer/Xcode/DerivedData/FW-fcasxjwxdpogdzciedtwcniicooa/Build/Products/Debug-iphonesimulator/FWCore.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6456B7051EA51A4300221AEF /* FWCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +69,7 @@
 				641DD3DC1E6BB63300D5F840 /* FWFramework */,
 				641DD3E71E6BB63300D5F840 /* FWFrameworkTests */,
 				641DD3DB1E6BB63300D5F840 /* Products */,
+				64E644001E759B9700BFC37E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +90,8 @@
 				641DD4071E6BCEDB00D5F840 /* FWFrameworkViewController.h */,
 				641DD4081E6BCEDB00D5F840 /* FWFrameworkViewController.m */,
 				641DD4091E6BCEDB00D5F840 /* FWFrameworkViewController.xib */,
+				379C779EB74165A3E475D6B5 /* FWFrameworkDelegate.m */,
+				379C7F8085FA23CADBCAE4AE /* FWFrameworkDelegate.h */,
 			);
 			path = FWFramework;
 			sourceTree = "<group>";
@@ -95,6 +105,14 @@
 			path = FWFrameworkTests;
 			sourceTree = "<group>";
 		};
+		64E644001E759B9700BFC37E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6456B7041EA51A4300221AEF /* FWCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,6 +122,7 @@
 			files = (
 				641DD3EB1E6BB63300D5F840 /* FWFramework.h in Headers */,
 				641DD40A1E6BCEDB00D5F840 /* FWFrameworkViewController.h in Headers */,
+				379C7164F83137871269A054 /* FWFrameworkDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				641DD40B1E6BCEDB00D5F840 /* FWFrameworkViewController.m in Sources */,
+				379C71ACDDDB62B22C03CBDE /* FWFrameworkDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

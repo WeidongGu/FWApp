@@ -29,7 +29,7 @@
 
 
 - (IBAction)clickGoFWFrameworkViewControllerButton:(id)sender {
-    UIViewController *fwFrameworkViewController = [self loadFrameworkViewControllerWithBundleNamed:@"FWFramework" ViewControllerName:@"FWFrameworkViewController"];
+    UIViewController *fwFrameworkViewController = [self loadFrameworkViewControllerWithBundleNamed:@"FWFramework"];
     [self.navigationController pushViewController:fwFrameworkViewController animated:YES];
 }
 
@@ -38,16 +38,16 @@
 }
 
 - (IBAction)clickGoFWFramework2ViewControllerButton:(id)sender {
-    UIViewController *fwFrameworkViewController = [self loadFrameworkViewControllerWithBundleNamed:@"FWFramework2" ViewControllerName:@"FWFramework2ViewController"];
+    UIViewController *fwFrameworkViewController = [self loadFrameworkViewControllerWithBundleNamed:@"FWFramework2"];
     [self.navigationController pushViewController:fwFrameworkViewController animated:YES];
 }
 
-- (id)loadFrameworkViewControllerWithBundleNamed:(NSString *)frameworkName ViewControllerName:(NSString *)viewControllerName{
+- (id)loadFrameworkViewControllerWithBundleNamed:(NSString *)frameworkName {
     NSFileManager *manager = [NSFileManager defaultManager];
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = nil;
     if ([paths count] != 0) {
-        documentDirectory = [paths objectAtIndex:0];
+        documentDirectory = paths[0];
     }
     
     NSString *bundlePath = [documentDirectory stringByAppendingPathComponent:[frameworkName stringByAppendingString:@".framework"]];
@@ -78,13 +78,16 @@
     }
     
     // 加载class
-    Class class = NSClassFromString(viewControllerName);
-    if (!class) {
+    Class delegateClass = NSClassFromString([NSString stringWithFormat:@"%@Delegate",frameworkName]);
+    if (!delegateClass) {
         NSLog(@"Unable to load class");
         return nil;
     }
     
-    id object = [class new];
+    id delegateObject = [delegateClass new];
+    
+    id object = [delegateObject performSelector:@selector(resourceWithURI:) withObject:@"UI://FWFrameworkViewController"];
+
     return object;
 }
 
@@ -94,16 +97,17 @@
     // 2、初始化
     NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager * manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+
     // 3、开始下载
-    NSURLSessionDownloadTask * task = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSURLSessionDownloadTask * task = [manager downloadTaskWithRequest:request progress:^(NSProgress *downloadProgress) {
         NSLog(@"%lf",1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+    } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         //这里要返回一个NSURL，其实就是文件的位置路径
         NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         //使用建议的路径
         path = [path stringByAppendingPathComponent:response.suggestedFilename];
         return [NSURL fileURLWithPath:path];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         //下载成功
         if (error == nil) {
             NSLog(@"下载完成:%@",[filePath path]);
@@ -127,6 +131,7 @@
             NSLog(@"解压成功");
         }
     }];
+
     //开始启动任务
     [task resume];
 }
