@@ -17,7 +17,7 @@ Embedded/
 !default.perspectivev3
 xcuserdata/
 
-*/.idea/
+/.idea/
 
 ## Other
 *.moved-aside
