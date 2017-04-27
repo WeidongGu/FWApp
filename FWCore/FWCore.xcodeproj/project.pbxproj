@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6456B7021EA519EE00221AEF /* FWCoreBundleDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6456B7001EA519EE00221AEF /* FWCoreBundleDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6498269E1EA51E3300E0B2DD /* FWURI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6498269C1EA51E3300E0B2DD /* FWURI.h */; };
+		6495787A1EA85D1000917414 /* FWBusAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 649578781EA85D1000917414 /* FWBusAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6495787B1EA85D1000917414 /* FWBusAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 649578791EA85D1000917414 /* FWBusAccessor.m */; };
+		6498269E1EA51E3300E0B2DD /* FWURI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6498269C1EA51E3300E0B2DD /* FWURI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6498269F1EA51E3300E0B2DD /* FWURI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6498269D1EA51E3300E0B2DD /* FWURI.m */; };
+		64999AE61EA8B21000156A0F /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64999AE41EA8B21000156A0F /* AFNetworking.framework */; };
+		64999AE71EA8B21000156A0F /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64999AE51EA8B21000156A0F /* ZipArchive.framework */; };
 		64E643ED1E759B5E00BFC37E /* FWCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E643E31E759B5D00BFC37E /* FWCore.framework */; };
 		64E643F21E759B5E00BFC37E /* FWCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E643F11E759B5E00BFC37E /* FWCoreTests.m */; };
 		64E643F41E759B5E00BFC37E /* FWCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E643E61E759B5E00BFC37E /* FWCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,8 +31,12 @@
 
 /* Begin PBXFileReference section */
 		6456B7001EA519EE00221AEF /* FWCoreBundleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWCoreBundleDelegate.h; sourceTree = "<group>"; };
+		649578781EA85D1000917414 /* FWBusAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWBusAccessor.h; sourceTree = "<group>"; };
+		649578791EA85D1000917414 /* FWBusAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWBusAccessor.m; sourceTree = "<group>"; };
 		6498269C1EA51E3300E0B2DD /* FWURI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWURI.h; sourceTree = "<group>"; };
 		6498269D1EA51E3300E0B2DD /* FWURI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWURI.m; sourceTree = "<group>"; };
+		64999AE41EA8B21000156A0F /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = ../FWSDK/AFNetworking.framework; sourceTree = "<group>"; };
+		64999AE51EA8B21000156A0F /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZipArchive.framework; path = ../FWSDK/ZipArchive.framework; sourceTree = "<group>"; };
 		64E643E31E759B5D00BFC37E /* FWCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FWCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E643E61E759B5E00BFC37E /* FWCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWCore.h; sourceTree = "<group>"; };
 		64E643E71E759B5E00BFC37E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64999AE61EA8B21000156A0F /* AFNetworking.framework in Frameworks */,
+				64999AE71EA8B21000156A0F /* ZipArchive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +66,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64999AC41EA8ADC700156A0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64999AE41EA8B21000156A0F /* AFNetworking.framework */,
+				64999AE51EA8B21000156A0F /* ZipArchive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		64E643D91E759B5D00BFC37E = {
 			isa = PBXGroup;
 			children = (
 				64E643E51E759B5D00BFC37E /* FWCore */,
 				64E643F01E759B5E00BFC37E /* FWCoreTests */,
 				64E643E41E759B5D00BFC37E /* Products */,
+				64999AC41EA8ADC700156A0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +102,8 @@
 				6456B7001EA519EE00221AEF /* FWCoreBundleDelegate.h */,
 				6498269C1EA51E3300E0B2DD /* FWURI.h */,
 				6498269D1EA51E3300E0B2DD /* FWURI.m */,
+				649578781EA85D1000917414 /* FWBusAccessor.h */,
+				649578791EA85D1000917414 /* FWBusAccessor.m */,
 			);
 			path = FWCore;
 			sourceTree = "<group>";
@@ -102,8 +124,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6498269E1EA51E3300E0B2DD /* FWURI.h in Headers */,
 				64E643F41E759B5E00BFC37E /* FWCore.h in Headers */,
+				6495787A1EA85D1000917414 /* FWBusAccessor.h in Headers */,
+				6498269E1EA51E3300E0B2DD /* FWURI.h in Headers */,
 				6456B7021EA519EE00221AEF /* FWCoreBundleDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6495787B1EA85D1000917414 /* FWBusAccessor.m in Sources */,
 				6498269F1EA51E3300E0B2DD /* FWURI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,12 +357,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../FWSDK";
 				INFOPLIST_FILE = FWCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tw.FWCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -350,12 +376,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../FWSDK";
 				INFOPLIST_FILE = FWCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tw.FWCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

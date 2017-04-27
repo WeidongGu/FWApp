@@ -7,6 +7,7 @@
 //
 
 #import "FWFrameworkViewController.h"
+#import <FWCore/FWCore.h>
 
 @interface FWFrameworkViewController ()
 
@@ -17,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"FWFrameworkViewController";
+    self.title = self.showText;
 }
 
 - (void)didReceiveMemoryWarning {

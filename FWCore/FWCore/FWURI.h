@@ -10,4 +10,14 @@
 
 @interface FWURI : NSObject
 
++ (instancetype)URIWithString:(NSString *)uriString;
+
+@property (nonatomic, copy) NSString *scheme;
+
+@property (nonatomic, copy) NSString *identifier;
+
+@property (nonatomic, copy) NSString *resourcePath;
+
+@property (nonatomic, strong) NSDictionary  *parameters;
+
 @end

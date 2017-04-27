@@ -8,9 +8,10 @@
 
 @implementation FWFrameworkDelegate
 
-- (id)resourceWithURI:(NSString *)uri {
-    if ([uri isEqualToString:@"UI://FWFrameworkViewController"]){
+- (id)resourceWithURI:(FWURI *)uri {
+    if ([uri.resourcePath isEqualToString:@"/main"]){
         FWFrameworkViewController *viewController = [[FWFrameworkViewController alloc]initWithNibName:@"FWFrameworkViewController" bundle:_FrameworkBundle_];
+        viewController.showText = uri.parameters[@"showText"];
         return viewController;
     }
     return nil;

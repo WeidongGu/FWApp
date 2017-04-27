@@ -10,4 +10,5 @@
 
 @interface FWFrameworkViewController : UIViewController
 
+@property (copy, nonatomic) NSString *showText;
 @end

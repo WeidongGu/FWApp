@@ -16,3 +16,5 @@ FOUNDATION_EXPORT const unsigned char FWCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <FWCore/PublicHeader.h>
 #import <FWCore/FWCoreBundleDelegate.h>
+#import <FWCore/FWURI.h>
+#import <FWCore/FWBusAccessor.h>
